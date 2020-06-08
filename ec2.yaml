@@ -50,8 +50,6 @@ Resources:
           Ebs:
             VolumeSize: 80
       Tags:
-        - Key: Name 
-          Value: test01
         - Key: Product
           Value: test
         - Key: Type
