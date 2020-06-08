@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Submit Stack') {
             steps {
-            sh "aws cloudformation create-stack --stack-name ecinstance --template-body file://ec2.yaml --parameters ParameterKey=KeyPairName,ParameterValue=KeyName ParameterKey=SubnetIDs,ParameterValue=SubnetID,ParameterKey=VpcId,ParameterValue=VpcID,ParameterKey=EnvironmentName,ParameterValue=PROD,ParameterKey=InstanceType,ParameterValue=InstanceType,ParameterKey=ImageID,ParameterValue=ImageID --region 'us-west-2'"
+            sh "aws cloudformation create-stack --stack-name ecinstance --template-body file://ec2.yaml --region 'us-west-2'"
               }
              }
             }
