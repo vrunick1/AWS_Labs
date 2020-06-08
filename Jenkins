@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Submit Stack') {
             steps {
-            sh "aws cloudformation create-stack --stack-name s3bucket2019 --template-body file://s3.yaml --region 'us-east-1'"
+            sh "aws cloudformation create-stack --stack-name s3bucket20191 --template-body file://s3.yaml --region 'us-east-1'"
               }
              }
             }
