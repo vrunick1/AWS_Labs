@@ -8,19 +8,24 @@ Parameters:
   VpcId:
     Description: VPC ID for resources
     Type: AWS::SSM::Parameter::Value<AWS::EC2::VPC>
+    Default: VpcID
   KeyName:
     Description: Name of an existing EC2 KeyPair to enable RDP access to the instance
     Type: AWS::SSM::Parameter::Value<AWS::EC2::KeyPair::KeyName>
     ConstraintDescription: must be the name of an existing EC2 KeyPair
+    Default: KeyName
   InstanceType:
     Description: App EC2 instance type
     Type: AWS::SSM::Parameter::Value<String>
+    Default: InstanceType
   SubnetID:
     Description: App EC2 instance type
     Type: AWS::SSM::Parameter::Value<AWS::EC2::Subnet>
+    Default: SubnetID
   ImageID:
     Description: App EC2 instance type
     Type: AWS::SSM::Parameter::Value<AWS::EC2::Image::ID>
+    Default: ImageID
 Resources:
   EC2Instance1:
     Type: AWS::EC2::Instance
