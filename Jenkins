@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Submit Stack') {
             steps {
-            sh "aws cloudformation create-stack --stack-name ecinstance2 --template-body file://ec2.yaml --tags Key=Name,Value=128asp01 Key=costid,Value=128 --region 'us-west-2'"
+            sh "aws cloudformation create-stack --stack-name ecinstance6 --template-body file://ec2.yaml --tags Key=Name,Value=128asp01 Key=costid,Value=128 --region 'us-west-2'"
               }
              }
             }
